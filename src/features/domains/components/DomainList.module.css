@@ -1,0 +1,90 @@
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px 12px;
+  /* Reserve the action-button's height so the bar doesn't jump when the
+     "Продлить выбранные" button appears/disappears on selection. */
+  min-height: 64px;
+  margin-bottom: 14px;
+  padding: 10px 14px;
+  background: var(--surface-muted);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.selectAll {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+}
+
+.selectAll input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--ton-blue);
+  cursor: pointer;
+}
+
+.controlsRight {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hint {
+  color: var(--text-muted);
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+/* Narrow screens: let the action row drop below and the button fill the width
+   so a long label like "Продлить выбранные (24)" never overflows the panel. */
+@media (max-width: 520px) {
+  .controlsRight {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .controlsRight :global(button) {
+    flex: 1;
+  }
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.status {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 40px 0;
+}
+
+.empty {
+  text-align: center;
+  padding: 48px 24px;
+  background: var(--surface-muted);
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-lg);
+}
+
+.emptyTitle {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.emptyText {
+  color: var(--text-muted);
+  font-size: 15px;
+}

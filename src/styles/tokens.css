@@ -1,0 +1,62 @@
+/* ---------------------------------------------------------------------------
+ * Design tokens — the single source of truth for the visual language.
+ *
+ * Modelled on the ton.org design system: a light, airy theme built around the
+ * TON brand blue (#0098EA), generous rounding, bold geometric type and soft,
+ * low-contrast surfaces. Components only ever reference these variables, never
+ * raw colours, so the whole look can be retuned from one place.
+ * ------------------------------------------------------------------------- */
+
+:root {
+  /* Brand */
+  --ton-blue: #0098ea;
+  --ton-blue-strong: #0085cc;
+  --ton-blue-soft: #e6f5fd;
+  --ton-gradient: linear-gradient(135deg, #0098ea 0%, #2bb3ff 100%);
+
+  /* Surfaces & background */
+  --bg: #ffffff;
+  --bg-muted: #f5f8fb;
+  --surface: #ffffff;
+  --surface-muted: #f7f9fc;
+  --border: #e7ecf2;
+  --border-strong: #d7dee7;
+
+  /* Text */
+  --text: #04060a;
+  --text-secondary: #515963;
+  --text-muted: #8b929c;
+
+  /* Status — domain expiry health */
+  --ok: #1aa563;
+  --ok-soft: #e7f6ee;
+  --soon: #e0931f;
+  --soon-soft: #fcf2df;
+  --critical: #ec6a2e;
+  --critical-soft: #fcece1;
+  --expired: #e5484d;
+  --expired-soft: #fce8e9;
+
+  /* Shape */
+  --radius-sm: 10px;
+  --radius: 16px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+
+  /* Elevation */
+  --shadow-sm: 0 1px 2px rgba(11, 31, 51, 0.04), 0 2px 8px rgba(11, 31, 51, 0.04);
+  --shadow-md: 0 4px 14px rgba(11, 31, 51, 0.06), 0 12px 32px rgba(11, 31, 51, 0.06);
+  --shadow-blue: 0 8px 24px rgba(0, 152, 234, 0.28);
+
+  /* Typography */
+  --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Helvetica, Arial, sans-serif;
+
+  /* Motion */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Layout */
+  --page-max: 760px;
+
+  color-scheme: light;
+}
