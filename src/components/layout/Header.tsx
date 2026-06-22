@@ -7,13 +7,13 @@ export function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.left}>
-        <a className={styles.brand} href="/" aria-label="TON Domains">
+        <div className={styles.brand} aria-label="TON Domains">
           <TonLogo size={26} />
           <span className={styles.brandText}>
             <span className={styles.brandTitle}>TON Domains</span>
             <span className={styles.brandSubtitle}>продление .ton</span>
           </span>
-        </a>
+        </div>
         {IS_TESTNET && <span className={styles.testnet}>Testnet</span>}
       </div>
       <TonConnectButton />
